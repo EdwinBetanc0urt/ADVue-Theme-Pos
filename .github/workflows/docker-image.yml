@@ -46,7 +46,7 @@ jobs:
       - name: Upload app as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ADVue-Theme-Pos        
+          name: ADVue-Theme-Pos
           path: ./ADVue-Theme-Pos.zip
 
 
@@ -88,6 +88,9 @@ jobs:
       - name: Get branch name
         id: branch-name
         uses: tj-actions/branch-names@v4.8
+
+      - run: echo ${{ needs.get-tags.outputs.tags }}
+      - run: echo ${{ steps.branch-name.outputs.current_branch }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
