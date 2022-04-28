@@ -38,8 +38,8 @@ RUN rm -rf /var/cache/apk/* \
 
 # Copy src files
 COPY dist-app/ /var/www/ADVue-Theme-Pos/
-#COPY build/start.sh /var/www/proxy-adempiere-api/start.sh
-#COPY dist-app/ /var/www/proxy-adempiere-api/
+# COPY build/start.sh /var/www/proxy-adempiere-api/start.sh
+# COPY dist-app/ /var/www/proxy-adempiere-api/
 
 RUN echo "Downloading ... $URL_BASE_REPOSITORY to $REPOSITORY_PATH" && \
 	git clone $URL_BASE_REPOSITORY $REPOSITORY_PATH && \
