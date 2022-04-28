@@ -59,4 +59,4 @@ COPY build/start.sh $REPOSITORY_PATH
 WORKDIR $REPOSITORY_PATH
 
 # Start app
-CMD	'sh' 'start.sh'
+CMD 'sh' 'start.sh'
